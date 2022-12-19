@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApplication2</name>
+    </assembly>
+    <members>
+        <member name="M:WebApplication2.Controllers.JacController.Triangle(WebApplication2.Model.RequestTriangle)">
+            <summary>
+            Determine the shape of the triangle.
+            </summary>
+            <param name="requestTriangle">Each side of the triangle.</param>
+            <returns>Shape of the triangle.</returns>
+        </member>
+        <member name="M:WebApplication2.Controllers.JacController.Fibonacci(WebApplication2.Model.RequestFibonacci)">
+            <summary>
+            Fibonancci numbers.
+            </summary>
+            <param name="requestFibonacci">The maximum value of fibonancci.</param>
+            <returns>Value of fibonacci numbers.</returns>
+        </member>
+        <member name="M:WebApplication2.Controllers.JacController.WordReverse(WebApplication2.Model.RequestWord)">
+            <summary>
+            Reversing word.
+            </summary>
+            <param name="requestWord">Word to be reverse.</param>
+            <returns>Reversed word.</returns>
+        </member>
+        <member name="M:WebApplication2.Controllers.JacController.WordHashed(WebApplication2.Model.RequestWord)">
+            <summary>
+            Hashing word.
+            </summary>
+            <param name="requestWord">Word to be hashed.</param>
+            <returns>Hashed word and akgorithm used.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApplication2</name>
+    </assembly>
+    <members>
+        <member name="M:WebApplication2.Controllers.JacController.Triangle(WebApplication2.Model.RequestTriangle)">
+            <summary>
+            Determine the shape of the triangle.
+            </summary>
+            <param name="requestTriangle">Each side of the triangle.</param>
+            <returns>Shape of the triangle.</returns>
+        </member>
+    </members>
+</doc>
