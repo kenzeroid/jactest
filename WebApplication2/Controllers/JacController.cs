@@ -61,7 +61,7 @@ namespace WebApplication2.Controllers
         public ResponseHashed WordHashed(RequestWord requestWord)
         {
             ResponseHashed responseHashed = new ResponseHashed();
-            responseHashed.algorithm = "SHA512";
+            responseHashed.algorithm = "SHA256";
             responseHashed.value = _taskToBeDone.WordHash(requestWord.word);
 
             return responseHashed;

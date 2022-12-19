@@ -43,14 +43,15 @@ namespace WebApplication2.Application.Service
             return response;
         }
 
-        public string WordReverse(string word)
+        public string WordReverse(string? word)
         {
+            if (word == null) return "";
             char[] charArray = word.ToCharArray();
             Array.Reverse(charArray);
             return new string(charArray);
         }
 
-        public string WordHash(string word)
+        public string WordHash(string? word)
         {
             if(word == null)
             {
