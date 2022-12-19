@@ -28,14 +28,12 @@ builder.Services.AddSwaggerGen(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+
+app.UseSwagger(options =>
 {
-    app.UseSwagger(options =>
-    {
-        options.SerializeAsV2 = true;
-    });
-    app.UseSwaggerUI();
-}
+    options.SerializeAsV2 = true;
+});
+app.UseSwaggerUI();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
