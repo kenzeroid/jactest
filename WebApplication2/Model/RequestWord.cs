@@ -2,6 +2,6 @@
 {
     public class RequestWord
     {
-        public string word { get; set; }
+        public string? word { get; set; }
     }
 }

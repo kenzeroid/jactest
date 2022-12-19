@@ -2,7 +2,7 @@
 {
     public class ResponseHashed
     {
-        public string Algorithm { get; set; }
-        public string Value { get; set; }
+        public string? algorithm { get; set; }
+        public string? value { get; set; }
     }
 }

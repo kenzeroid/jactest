@@ -1,4 +1,6 @@
-﻿using WebApplication2.Application.Interface;
+﻿using System.Security.Cryptography;
+using System.Text;
+using WebApplication2.Application.Interface;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace WebApplication2.Application.Service
@@ -56,18 +58,11 @@ namespace WebApplication2.Application.Service
             }
 
             // Uses SHA256 to create the hash
-            using (var sha = new System.Security.Cryptography.SHA256Managed())
+            using (var hashAlgorithm = SHA512.Create())
             {
-                // Convert the string to a byte array first, to be processed
-                byte[] textBytes = System.Text.Encoding.UTF8.GetBytes(word + "");
-                byte[] hashBytes = sha.ComputeHash(textBytes);
-
-                // Convert back to a string, removing the '-' that BitConverter adds
-                string hash = BitConverter
-                    .ToString(hashBytes)
-                    .Replace("-", String.Empty);
-
-                return hash;
+                var byteValue = Encoding.UTF8.GetBytes(word);
+                var byteHash = hashAlgorithm.ComputeHash(byteValue);
+                return Convert.ToBase64String(byteHash);
             }
         }
     }
